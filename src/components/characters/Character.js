@@ -37,3 +37,5 @@ Character.propTypes = {
   photo: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 }
+
+export default Character;

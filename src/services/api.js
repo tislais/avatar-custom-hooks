@@ -4,3 +4,7 @@ export const fetchCharacters = async () => {
 
   return results;
 }
+
+
+
+
