@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom';
 import { useCharacters } from '../../state/characters';
 import Character from './Character';
 
-
-
 const CharacterList = () => {
-  const characters = useCharacters();
+  const { characters, loading } = useCharacters();
+  if (loading) return <h1>Loading...</h1>
 
   const characterElements = characters.map((character, i) => (
     <li key={character._id} 
