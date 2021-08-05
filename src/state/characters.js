@@ -5,7 +5,7 @@ export const useCharacters = () => {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    fetchCharacters().then(setCharacters())
+    fetchCharacters().then(setCharacters)
   }, []);
 
   return characters;
@@ -16,7 +16,7 @@ export const useCharacter = (id) => {
 
   useEffect(() => {
     fetchCharacter(id).then(setCharacter);
-  }, []);
+  }, [id]);
 
   return character;
 }
