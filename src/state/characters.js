@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { fetchCharacters } from '../services/api';
+import { fetchCharacters, fetchCharacter } from '../services/api';
 
 export const useCharacters = () => {
   const [characters, setCharacters] = useState([]);
@@ -11,4 +11,13 @@ export const useCharacters = () => {
   return characters;
 };
 
+export const useCharacter = (id) => {
+  const [character, setCharacter] = useState(null);
+
+  useEffect(() => {
+    fetchCharacter(id).then(setCharacter);
+  }, []);
+
+  return character;
+}
 
