@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Character = ({ name, allies, enemies, photo, id }) => (
+const Character = ({ name, allies, enemies, photoUrl, id }) => (
   <figure className="h-full">
-    <img src={photo} alt={name}
+    <img src={photoUrl} alt={name}
       className="
         h-2/3 
         w-full 
@@ -34,7 +34,7 @@ Character.propTypes = {
   name: PropTypes.string.isRequired,
   allies: PropTypes.array,
   enemies: PropTypes.array,
-  photo: PropTypes.string.isRequired,
+  photoUrl: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 }
 
