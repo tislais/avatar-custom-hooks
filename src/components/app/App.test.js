@@ -17,4 +17,17 @@ describe('App component', () => {
     expect(ul).not.toBeEmptyDOMElement();
   });
 
+  it('displays a characters details', async() => {
+    render(
+      <MemoryRouter initialEntries={['/character/5cf5679a915ecad153ab68d1']}>
+        <App />
+      </MemoryRouter>
+    );
+
+    screen.getByText('Loading...');
+
+    await screen.findByText('Analay');
+    await screen.findByText('Female');
+  });
+
 });
